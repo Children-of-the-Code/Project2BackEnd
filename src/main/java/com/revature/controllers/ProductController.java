@@ -4,6 +4,7 @@ import com.revature.annotations.Authorized;
 import com.revature.dtos.ProductInfo;
 import com.revature.models.Product;
 import com.revature.models.User;
+import com.revature.repositories.ProductRepository;
 import com.revature.services.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -109,5 +110,15 @@ public class ProductController {
     @GetMapping("/sale")
     public ResponseEntity<List<Product>> getProductsOnSale() {
         return ResponseEntity.ok(productService.getProductsOnSale());
+    }
+    @GetMapping("/ID")
+    @Authorized
+    public ResponseEntity<List<Product>> getAllProductById(){
+        return ResponseEntity.ok(productService.getAllProductById());
+    }
+    @GetMapping("/quantity")
+    @Authorized
+    public ResponseEntity<List<Product>> getProductOnQuantity(){
+        return ResponseEntity.ok(productService.getProductOnQuantity());
     }
 }

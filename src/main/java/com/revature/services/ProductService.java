@@ -43,5 +43,13 @@ public class ProductService {
 
     public List<Product> getProductsOnSale() {
         return productRepository.getProductsOnSale();
+
     }
+    public List <Product> getAllProductById(){
+        return productRepository.getAllProductById();
+    }
+    public List<Product>getProductOnQuantity(){
+        return productRepository.getProductOnQuantity();
+    }
+
 }
