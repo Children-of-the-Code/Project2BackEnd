@@ -15,8 +15,14 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
     @Query("FROM Product WHERE sale > 0")
     List<Product> getProductsOnSale();
+<<<<<<< HEAD
     @Query("FROM Product where quantity > 0")
     List<Product>getProductOnQuantity();
     @Query("From Product WHERE PRODUCT_ID product_Id")
     List <Product> getAllProductById();
+=======
+
+    @Query("FROM Product WHERE quantity > 0")
+    List<Product> getProductsOverZero();
+>>>>>>> upstream/main
 }

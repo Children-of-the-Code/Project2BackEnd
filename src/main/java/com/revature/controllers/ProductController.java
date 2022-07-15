@@ -111,6 +111,7 @@ public class ProductController {
     public ResponseEntity<List<Product>> getProductsOnSale() {
         return ResponseEntity.ok(productService.getProductsOnSale());
     }
+<<<<<<< HEAD
     @GetMapping("/ID")
     @Authorized
     public ResponseEntity<List<Product>> getAllProductById(){
@@ -120,5 +121,12 @@ public class ProductController {
     @Authorized
     public ResponseEntity<List<Product>> getProductOnQuantity(){
         return ResponseEntity.ok(productService.getProductOnQuantity());
+=======
+
+    @Authorized
+    @GetMapping("/overZero")
+    public ResponseEntity<List<Product>> getProductsOverZero() {
+        return ResponseEntity.ok(productService.getProductsOverZero());
+>>>>>>> upstream/main
     }
 }

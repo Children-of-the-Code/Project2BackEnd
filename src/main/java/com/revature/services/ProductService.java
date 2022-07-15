@@ -48,8 +48,13 @@ public class ProductService {
     public List <Product> getAllProductById(){
         return productRepository.getAllProductById();
     }
+<<<<<<< HEAD
     public List<Product>getProductOnQuantity(){
         return productRepository.getProductOnQuantity();
     }
 
+=======
+
+    public List<Product> getProductsOverZero() {return productRepository.getProductsOverZero();}
+>>>>>>> upstream/main
 }
