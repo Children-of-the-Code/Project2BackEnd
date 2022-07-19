@@ -116,6 +116,14 @@ class ECommerceApplicationTests {
 		assertEquals(HttpStatus.OK.value(), logInResponse.getStatusCode(), response.getStatusCode());
 	}
 
+	@Test public void whenGetAllSaleProductsLoggedIn_thenOK(){
+		final User user = getExistingUser();
+		Response logInResponse = logIn(user);
+		final Response response = RestAssured.get(API_ROOT + "/api/product/sale");
+		assertEquals(HttpStatus.OK.value(), logInResponse.getStatusCode(), response.getStatusCode());
+
+	}
+
 
 	// ===================================================================================
 	private Response logIn(User user) {
